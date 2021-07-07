@@ -102,3 +102,11 @@ python evaluate.py with weight_file=<arg> reconstruction=<arg> device=<arg>
 * `device`: the device to be trained on. Either `cpu` or `cuda:0`
 
 The transcripted midi files, accuracy reports are saved inside the `results` folder.
+
+## Other notes
+For Mac users, you need to add the following code in helper_functions.py
+
+```python
+import matplotlib
+matplotlib.use('TkAgg')
+```
