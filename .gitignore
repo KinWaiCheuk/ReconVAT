@@ -1,2 +1,6 @@
 *.flp
 .DS_Store
+Application
+Weight
+model
+.ipynb_checkpoints
