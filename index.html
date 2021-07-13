@@ -3,16 +3,16 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Demo</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
 
 <style type="text/css">
-    pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
@@ -14259,14 +14259,15 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="ACM-MM-2021-Demo-Page">ACM MM 2021 Demo Page<a class="anchor-link" href="#ACM-MM-2021-Demo-Page">&#182;</a></h1><p>This demo page is for the paper <strong>ReconVAT: A Semi-Supervised Automatic Music Transcription Framework Towards Real-World Applications</strong>. Here, we want to demonstrate that our proposed semi-supervised framework for AMT can leverage unlabelled data and generalize better to unseen data than the fully supervised baseline. Both <em>Pop Music</em> and <em>Concerto Grosso</em> are not present in the labelled data, but our semi-supervised framework can still generalize to these unseen genres.</p>
+<h1 id="ACM-MM-2021-Demo-Page">ACM MM 2021 Demo Page<a class="anchor-link" href="#ACM-MM-2021-Demo-Page">&#182;</a></h1><p>This demo page is for the paper <strong>ReconVAT: A Semi-Supervised Automatic Music Transcription Framework for Low-Resource Real-World Data</strong>. Here, we want to demonstrate that our proposed semi-supervised framework for AMT can generalize better to unseen data than the fully supervised baseline. Both <em>Pop Music</em> and <em>Concerto Grosso</em> are not present in the labelled data, but our semi-supervised framework can still be trained on these unseen genre without labels.</p>
+<p><strong>Source code:</strong> <a href="https://github.com/KinWaiCheuk/ReconVAT">https://github.com/KinWaiCheuk/ReconVAT</a></p>
+<p><strong>Details of data splitting:</strong> <a href="https://github.com/KinWaiCheuk/ReconVAT/blob/gh-pages/supplementary.pdf">https://github.com/KinWaiCheuk/ReconVAT/blob/gh-pages/supplementary.pdf</a></p>
 <p>Three models are compared here:</p>
 <ul>
 <li>ReconVAT (existing + new data): The proposed semi-supervised AMT framework based on spectrogram reconstruction <a href="https://arxiv.org/abs/2010.09969">[1]</a> and VAT <a href="https://arxiv.org/abs/1704.03976">[2]</a>. It is trained using existing data for 4k epoches, then add the music downloaded from Youtube or ISMLP as the unlabelled data and train for another 4k epoches.</li>
 <li>ReconVAT (existing): The proposed semi-supervised AMT framework trained using existing data for 8k epoches.</li>
 <li>Baseline: A fully supervied model <a href="https://ieeexplore.ieee.org/document/9222310">[3]</a> trained using existing data for 8k epoches.</li>
 </ul>
-<p>Source code for the paper is available as part of the supplementary material</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
@@ -14376,7 +14377,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="String">String<a class="anchor-link" href="#String">&#182;</a></h2><p>We downloaded Corelli's Concerto Grosso OP.6 <a href="https://imslp.org/wiki/Concerto_grosso_in_D_major%2C_Op.6_No.1%28Corelli%2C_Arcangelo%29">No.1</a>, <a href="https://imslp.org/wiki/Concerto_grosso_in_F_major%2C_Op.6_No.2_%28Corelli%2C_Arcangelo%29">No.2</a>, and <a href="https://imslp.org/wiki/Concerto_grosso_in_C_minor%2C_Op.6_No.3_%28Corelli%2C_Arcangelo%29">No.3</a> from ISMLP. As a preprossing step, we break down each of the concerto into shorter pieces movement by movement. These three compositions result in 17 different movements after the preporcessing, and we add them to our unlabelled data to train our proposed framework.</p>
+<h2 id="String">String<a class="anchor-link" href="#String">&#182;</a></h2><p>We downloaded Corelli's Concerto Grosso OP.6 <a href="https://imslp.org/wiki/Concerto_grosso_in_D_major%2C_Op.6_No.1_(Corelli%2C_Arcangelo">No.1</a>), <a href="https://imslp.org/wiki/Concerto_grosso_in_F_major%2C_Op.6_No.2_(Corelli%2C_Arcangelo">No.2</a>), and <a href="https://imslp.org/wiki/Concerto_grosso_in_C_minor%2C_Op.6_No.3_(Corelli%2C_Arcangelo">No.3</a>) from ISMLP. As a preprossing step, we break down each of the concerto into shorter pieces movement by movement. These three compositions result in 17 different movements after the preporcessing, and we add them to our unlabelled data to train our proposed framework.</p>
 
 </div>
 </div>
@@ -14457,8 +14458,6 @@ a.anchor-link {
  </tr>
 </table>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
 </div>
 </body>
 
