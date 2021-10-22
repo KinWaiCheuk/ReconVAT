@@ -1290,10 +1290,10 @@ class UNet(nn.Module):
 
         return predictions, losses, spec.squeeze(1)
     
-    def transcribe(self, batch):
-        audio_label = batch['audio']
+    def transcribe(self, audio):
+        audio
         # Converting audio to spectrograms
-        spec = self.spectrogram(audio_label.reshape(-1, audio_label.shape[-1])[:, :-1]) # x = torch.rand(8,229, 640)      
+        spec = self.spectrogram(audio.reshape(-1, audio.shape[-1])[:, :-1]) # x = torch.rand(8,229, 640)      
         # log compression
         if self.log:
             spec = torch.log(spec + 1e-5)
